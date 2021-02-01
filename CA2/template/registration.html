@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div class="grid-container">
+        <div class="navigation-bar grid-item-row-1">
+            <div class="navigation-bar-left">
+                <div>
+                    <a href="/" >Home</a>
+                </div>
+            </div>
+            <div class="navigation-bar-right">
+                <div>
+                    <input type="search">
+                    <button>Search</button>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item-row-2">
+            <h2 class="signup-title">{{title}}: {{information}}</h2>
+            <form method="post" action="/process-registration/">
+                <div class="form-grid">
+                     <label>First Name: </label><input type="text" name="firstname" required maxlength="20">
+                     <label>Surname: </label><input type="text" name="surname" required maxlength="20">
+                     <label>Date of Birth: </label><input type="date" name="date_of_birth" >
+                     <label>Residential Address: </label><input type="text" name="residential_address"  required maxlength="60">
+                     <label>Nationality: </label><input type="text" name="nationality" placeholder="Enter password here" required maxlength="50">
+                     <label>NIN: </label><input type="number" name="national_identification_number" placeholder="Enter NIN here" required maxlength="50">
+                     &nbsp;<input type="submit" value="Submit" class="button">
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock%}
+

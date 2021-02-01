@@ -1,0 +1,26 @@
+.grid-container{
+    display:grid;
+    /*grid-template-columns: auto auto auto; /*3 define 3 columns of equal sizes*/
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-areas:
+    "navigation navigation navigation"
+    "bg-image1 bg-image1 bg-image1"
+    "article1 article2 article3"
+    "bg-image2 bg-image2 bg-image2";
+    gap: 0 10px; /* gap creates a space between grid areas. The first value is row-gap and the second column-gap*/
+}
+
+.content-with-background-color{
+ min-height: 180px;
+ background-color: #eeeeee;
+ font-size: 1.5em;
+ border: 1px solid #eeeeee;
+ padding: 10px 15px 10px 20px;
+ /*margin: 10px;*/
+ color: #000000;
+ opacity: .8;
+}
+
+.grid-item-row-2{
+ grid-area: bgimage1;
+}
