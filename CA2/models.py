@@ -1,4 +1,4 @@
-from CA2.main import db
+from main import db
 from datetime import date
 
 
